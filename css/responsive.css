@@ -1,0 +1,33 @@
+/* ============================================================
+   responsive.css — ajustes além do mobile-first
+   ============================================================ */
+@media (max-width: 360px) {
+  body { font-size: 16px; }
+
+}
+
+/* Telas largas: a coluna vertical continua centralizada sobre o mesmo mármore */
+@media (min-aspect-ratio: 5628/10000) {
+  .stage {
+    -webkit-mask-image: linear-gradient(180deg, #000 0, #000 91%, transparent 100%), linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    -webkit-mask-composite: source-in;
+            mask-image: linear-gradient(180deg, #000 0, #000 91%, transparent 100%), linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+            mask-composite: intersect;
+  }
+}
+@media (min-width: 720px) {
+  .music { right: 24px; bottom: 24px; }
+  .paper-wrap { width: 460px; }
+}
+
+/* Celular deitado / telas baixas */
+@media (max-height: 640px) {
+  .message { margin-top: -6svh; }
+}
+
+/* Efeitos de hover só onde existe ponteiro fino */
+@media (hover: hover) {
+  .btn:hover { transform: translateY(-2px) scale(1.02); filter: drop-shadow(0 8px 14px rgba(200, 150, 50, .45)) brightness(1.04); }
+  .btn:hover .btn__shine::after { transform: translateX(560%) skewX(-18deg); transition: transform .9s ease; }
+}
+@media (hover: none) { .modal__close:hover { transform: none; } }

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR" data-opening="initial">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F6E3C6">
+  <!-- O convite sempre começa no topo (corrige a restauração de rolagem) -->
+  <script>
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    window.addEventListener('pageshow', function () {
+      if (document.documentElement.getAttribute('data-opening') !== 'completed') window.scrollTo(0, 0);
+    });
+    try { if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim'); } catch (e) {}
+  </script>
+  <title>Paloma 40 anos | Convite</title>
+  <meta name="description" content="Você é meu convidado especial para celebrar os 40 anos de Paloma. 14 de novembro de 2026.">
+  <meta property="og:title" content="Paloma 40 anos | Convite">
+  <meta property="og:description" content="Abra o convite e celebre comigo esse momento inesquecível.">
+  <meta property="og:image" content="assets/images/hero.webp">
+
+  <link rel="icon" type="image/webp" href="assets/images/coroa.webp">
+  <link rel="preload" as="image" href="assets/opening/gate-left.png">
+  <link rel="preload" as="image" href="assets/opening/gate-right.png">
+  <link rel="preload" as="image" href="assets/images/marmore.jpg">
+  <link rel="preload" as="image" href="assets/images/hero.webp">
+  <link rel="preload" as="font" type="font/ttf" href="assets/fonts/PinyonScript-Regular.ttf" crossorigin>
+
+  <link rel="stylesheet" href="css/opening.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <noscript><style>.opening{display:none}html{overflow:auto!important}[data-h],[data-reveal],[data-line],.bfly,.btn,.gem{opacity:1!important}.name__wipe{-webkit-mask-image:none!important;mask-image:none!important}</style></noscript>
+</head>
+<body>
+
+  <!-- Cenário contínuo: um único mármore fixo atrás de toda a página -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__marble"></div>
+    <div class="bg__light" data-light></div>
+    <div class="bg__dust" data-dust></div>
+  </div>
+
+  <main class="scene" id="convite" tabindex="-1">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-labelledby="nome">
+      <div class="stage" data-stage>
+        <div class="plate-par" data-par>
+          <div class="plate" data-plate>
+            <img class="plate__img" src="assets/images/hero.webp" alt="" width="941" height="1672" fetchpriority="high" decoding="async">
+
+            <div class="sparkles" data-sparkles aria-hidden="true">
+              <i style="left:49.9%;top:14.4%;--s:1.6;--d:0s"></i>
+              <i style="left:35.4%;top:10.4%;--s:1.1;--d:.9s"></i>
+              <i style="left:63.9%;top:10.4%;--s:1.1;--d:1.7s"></i>
+              <i style="left:28.7%;top:13.8%;--s:.9;--d:2.4s"></i>
+              <i style="left:71%;top:13.8%;--s:.9;--d:.5s"></i>
+              <i style="left:37%;top:6.9%;--s:.8;--d:1.3s"></i>
+              <i style="left:61.6%;top:7.8%;--s:.8;--d:2.1s"></i>
+              <i style="left:86%;top:27.6%;--s:1;--d:1s"></i>
+              <i style="left:12.7%;top:27.2%;--s:1;--d:2.7s"></i>
+              <i style="left:17%;top:48%;--s:.9;--d:1.9s"></i>
+              <i style="left:93%;top:36%;--s:.8;--d:.2s"></i>
+            </div>
+            <div class="petals" data-petals aria-hidden="true"></div>
+
+            <div class="copy">
+              <h1 class="name" id="nome" data-h data-name>
+                <span class="name__wipe" data-wipe>
+                  <span class="name__shadow" aria-hidden="true">Paloma</span>
+                  <span class="name__txt">Paloma</span>
+                </span>
+              </h1>
+              <div class="orn-h" data-h data-orn aria-hidden="true">
+                <svg viewBox="0 0 220 24" focusable="false">
+                  <defs><linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#9a6c18"/><stop offset=".5" stop-color="#e2b550"/><stop offset="1" stop-color="#9a6c18"/></linearGradient></defs>
+                  <g fill="none" stroke="url(#og)" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M4 12h58c10 0 12-8 22-8s10 8 0 8-10-8-20-8"/>
+                    <path d="M216 12h-58c-10 0-12-8-22-8s-10 8 0 8 10-8 20-8"/>
+                  </g>
+                  <path d="M110 5l5 7-5 7-5-7z" fill="url(#og)"/>
+                </svg>
+              </div>
+              <p class="age" data-h data-age><span class="age__num">40</span> anos</p>
+              <p class="phrase" data-h data-phrase>Uma história construída com sonhos, conquistas e momentos inesquecíveis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MENSAGEM (folha de papel sobreposta) ===================== -->
+    <section class="message" id="mensagem" aria-label="Mensagem da aniversariante">
+      <div class="paper-wrap" data-paper-wrap>
+        <div class="paper" data-paper>
+          <img class="paper__img" src="assets/images/papel.webp" alt="" aria-hidden="true" width="956" height="1326" loading="lazy">
+          <div class="paper__text">
+            <p data-line>Há momentos na vida que se tornam ainda mais preciosos quando compartilhados com pessoas que fazem parte da nossa história.</p>
+            <p data-line>E nenhuma celebração estaria completa sem a presença de quem torna a nossa caminhada mais bonita.</p>
+            <p data-line>É com muito carinho e alegria que convido você para compartilhar comigo esse momento inesquecível!</p>
+          </div>
+        </div>
+        <div class="butterflies" aria-hidden="true">
+          <span class="bfly bfly--1" data-bfly><img src="assets/images/borboleta-1.webp" alt="" loading="lazy"></span>
+          <span class="bfly bfly--2" data-bfly><img src="assets/images/borboleta-2.webp" alt="" loading="lazy"></span>
+          <span class="bfly bfly--3" data-bfly><img src="assets/images/borboleta-3.webp" alt="" loading="lazy"></span>
+          <span class="bfly bfly--4" data-bfly><img src="assets/images/borboleta-4.webp" alt="" loading="lazy"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTAGEM REGRESSIVA ===================== -->
+    <section class="countdown" id="contagem" aria-labelledby="contagem-titulo">
+      <div class="orn" aria-hidden="true" data-reveal><i></i><b></b><i></i></div>
+      <h2 class="script-title gs" id="contagem-titulo" data-text="O grande dia se aproxima!" data-reveal><span class="gs__t">O grande dia se aproxima!</span></h2>
+
+      <div class="count" data-countdown role="timer" aria-live="off" aria-label="Tempo restante para a festa">
+        <div class="count__grid">
+          <div class="count__unit" data-unit-wrap><div class="medal"><img src="assets/images/medalhao.webp" alt="" aria-hidden="true" width="640" height="637" loading="lazy"><span class="count__num" data-unit="days">00</span></div><span class="count__label">Dias</span></div>
+          <div class="count__unit" data-unit-wrap><div class="medal"><img src="assets/images/medalhao.webp" alt="" aria-hidden="true" width="640" height="637" loading="lazy"><span class="count__num" data-unit="hours">00</span></div><span class="count__label">Horas</span></div>
+          <div class="count__unit" data-unit-wrap><div class="medal"><img src="assets/images/medalhao.webp" alt="" aria-hidden="true" width="640" height="637" loading="lazy"><span class="count__num" data-unit="minutes">00</span></div><span class="count__label">Minutos</span></div>
+          <div class="count__unit" data-unit-wrap><div class="medal"><img src="assets/images/medalhao.webp" alt="" aria-hidden="true" width="640" height="637" loading="lazy"><span class="count__num" data-unit="seconds">00</span></div><span class="count__label">Segundos</span></div>
+        </div>
+        <p class="count__done script-title gs" data-done data-text="O grande dia chegou!" hidden><span class="gs__t">O grande dia chegou!</span></p>
+      </div>
+      <p class="sr-only" data-countdown-sr aria-live="polite"></p>
+    </section>
+
+    <!-- ===================== INFORMAÇÕES ===================== -->
+    <section class="event" id="evento" aria-labelledby="evento-titulo">
+      <div class="event__plate" data-event-plate>
+        <img class="event__img" src="assets/images/evento.webp" alt="" aria-hidden="true" width="1024" height="1354" loading="lazy">
+        <div class="event__text" data-event-text>
+          <h2 class="ev-name gs" id="evento-titulo" data-text="Paloma" data-ev="name"><span class="gs__t">Paloma</span></h2>
+          <p class="ev-age" data-ev>40 anos</p>
+          <div class="orn orn--small" aria-hidden="true" data-ev><i></i><b></b><i></i></div>
+          <dl class="info">
+            <div data-ev><dt class="sr-only">Data</dt><dd>Sábado, 14 de novembro de 2026</dd></div>
+            <i class="info__gem" aria-hidden="true" data-ev></i>
+            <div data-ev><dt class="sr-only">Horário</dt><dd>Das 13h30 às 19h30</dd></div>
+            <i class="info__gem" aria-hidden="true" data-ev></i>
+            <div data-ev><dt class="sr-only">Local</dt><dd>Rua Vicente Turno, 26<br>Jardim Arantes</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOTÕES ===================== -->
+    <section class="actions" id="acoes" aria-label="Ações do convite">
+      <div class="orn" aria-hidden="true" data-reveal><i></i><b></b><i></i></div>
+      <nav class="actions__list" data-actions>
+        <a class="btn" data-btn="local" style="--lx:34%;--rx:15%" href="https://maps.app.goo.gl/5A2KVDd5vLPrH32UA?g_st=aw" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/btn-local.webp" alt="" width="1100" height="490" loading="lazy">
+          <span class="btn__label">Como chegar</span><i class="btn__shine" aria-hidden="true"></i>
+        </a>
+        <i class="gem" aria-hidden="true"></i>
+        <button class="btn" type="button" data-btn="rsvp" style="--lx:35%;--rx:13%" data-open-modal="modal-rsvp" aria-haspopup="dialog">
+          <img src="assets/images/btn-confirmar.webp" alt="" width="1100" height="490" loading="lazy">
+          <span class="btn__label">Confirmar presença</span><i class="btn__shine" aria-hidden="true"></i>
+        </button>
+        <i class="gem" aria-hidden="true"></i>
+        <button class="btn" type="button" data-btn="gift" style="--lx:39%;--rx:12%" data-open-modal="modal-gift" aria-haspopup="dialog">
+          <img src="assets/images/btn-presente.webp" alt="" width="1100" height="490" loading="lazy">
+          <span class="btn__label">Presente solidário</span><i class="btn__shine" aria-hidden="true"></i>
+        </button>
+        <i class="gem" aria-hidden="true"></i>
+        <button class="btn" type="button" data-btn="dress" style="--lx:41%;--rx:11%" data-open-modal="modal-dress" aria-haspopup="dialog">
+          <img src="assets/images/btn-dresscode.webp" alt="" width="1100" height="490" loading="lazy">
+          <span class="btn__label">Dress Code</span><i class="btn__shine" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="finale" id="encerramento">
+      <div class="finale__castle" aria-hidden="true" data-castle>
+        <img src="assets/images/castelo.webp" alt="" width="880" height="1100" loading="lazy">
+      </div>
+      <div class="finale__glow" aria-hidden="true" data-finale-glow></div>
+      <div class="finale__content">
+        <img class="finale__crown" src="assets/images/coroa.webp" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy" data-finale-crown>
+        <p class="finale__name gs" data-text="Paloma" data-finale-name><span class="gs__t">Paloma</span></p>
+        <p class="finale__phrase" data-finale-phrase>Estarei esperando por você!</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ===================== MODAIS ===================== -->
+  <div class="modal" id="modal-rsvp" role="dialog" aria-modal="true" aria-labelledby="rsvp-title" hidden>
+    <div class="modal__panel" data-modal-panel>
+      <div class="modal__orn" aria-hidden="true"></div>
+      <button class="modal__close" type="button" aria-label="Fechar" data-close-modal>&times;</button>
+      <div class="modal__body">
+        <h2 class="modal__title gs" id="rsvp-title" data-text="Confirmar presença"><span class="gs__t">Confirmar presença</span></h2>
+        <div class="orn orn--small" aria-hidden="true"><i></i><b></b><i></i></div>
+        <p class="modal__text">Oi, Paloma! É claro que eu não ficaria de fora dessa comemoração. Vai ser lindo celebrar essa nova fase e essa data tão especial ao seu lado!</p>
+        <div class="modal__actions">
+          <a class="modal__cta" data-whatsapp href="#" target="_blank" rel="noopener noreferrer">Enviar confirmação pelo WhatsApp</a>
+        </div>
+        <p class="modal__note">O WhatsApp abrirá com a mensagem pronta. É só tocar em enviar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-gift" role="dialog" aria-modal="true" aria-labelledby="gift-title" hidden>
+    <div class="modal__panel" data-modal-panel>
+      <div class="modal__orn" aria-hidden="true"></div>
+      <button class="modal__close" type="button" aria-label="Fechar" data-close-modal>&times;</button>
+      <div class="modal__body">
+        <h2 class="modal__title modal__title--long gs" id="gift-title" data-text="Presente solidário"><span class="gs__t">Presente solidário</span></h2>
+        <div class="orn orn--small" aria-hidden="true"><i></i><b></b><i></i></div>
+        <p class="modal__text">O maior presente é estarmos juntos! Que tal transformar seu presente em uma doação de alimento para nossa ação social de Natal? Sua contribuição fará o Natal de alguém muito mais feliz.</p>
+        <p class="modal__quote">Participe da nossa ação de Natal.</p>
+        <div class="qr" data-qr>
+          <div class="qr__box" data-qr-box>
+            <span class="qr__placeholder">QR Code<br>em breve</span>
+          </div>
+        </div>
+        <div class="modal__actions">
+          <button class="modal__cta modal__cta--ghost" type="button" data-copy-link>Copiar link de contribuição</button>
+        </div>
+        <p class="modal__note" data-gift-note role="status" aria-live="polite">O QR Code e o link serão disponibilizados em breve.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-dress" role="dialog" aria-modal="true" aria-labelledby="dress-title" hidden>
+    <div class="modal__panel" data-modal-panel>
+      <div class="modal__orn" aria-hidden="true"></div>
+      <button class="modal__close" type="button" aria-label="Fechar" data-close-modal>&times;</button>
+      <div class="modal__body">
+        <h2 class="modal__title gs" id="dress-title" data-text="Dress Code"><span class="gs__t">Dress Code</span></h2>
+        <div class="orn orn--small" aria-hidden="true"><i></i><b></b><i></i></div>
+        <p class="modal__text">Para tornar nossa celebração ainda mais harmoniosa, pedimos carinhosamente que evitem trajes em tons de rosa e azul.</p>
+        <div class="swatches" role="list" aria-label="Tons a evitar">
+          <div class="swatches__row" role="presentation">
+            <span class="sw" role="listitem" style="--c:#F9D9E1" title="Rosa-bebê"></span>
+            <span class="sw" role="listitem" style="--c:#F2A8BD" title="Rosa claro"></span>
+            <span class="sw" role="listitem" style="--c:#E27C9C" title="Rosa"></span>
+            <span class="sw" role="listitem" style="--c:#D14F7A" title="Rosa intenso"></span>
+            <span class="sw" role="listitem" style="--c:#B0285C" title="Pink escuro"></span>
+          </div>
+          <div class="swatches__row" role="presentation">
+            <span class="sw" role="listitem" style="--c:#D4E6F7" title="Azul-bebê"></span>
+            <span class="sw" role="listitem" style="--c:#9CC4EA" title="Azul claro"></span>
+            <span class="sw" role="listitem" style="--c:#5E97D3" title="Azul"></span>
+            <span class="sw" role="listitem" style="--c:#2F66B0" title="Azul royal"></span>
+            <span class="sw" role="listitem" style="--c:#183A78" title="Azul-marinho"></span>
+          </div>
+        </div>
+        <p class="modal__note">Do tom mais suave ao mais intenso, pedimos que todos os tons de rosa e azul sejam evitados.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABERTURA (portões) ===================== -->
+  <div class="opening" data-opening-root data-hero="#convite" data-state="initial"
+       role="button" tabindex="0" aria-label="Abrir convite de Paloma, 40 anos">
+    <div class="opening__camera">
+      <div class="opening__glow"></div>
+      <div class="opening__stage">
+        <div class="leaf leaf--left">
+          <img class="leaf__img" src="assets/opening/gate-left.png" alt="" draggable="false">
+          <div class="leaf__fx leaf__sheen"><i></i></div>
+          <div class="leaf__fx leaf__shade"></div>
+        </div>
+        <div class="leaf leaf--right">
+          <img class="leaf__img" src="assets/opening/gate-right.png" alt="" draggable="false">
+          <div class="leaf__fx leaf__sheen"><i></i></div>
+          <div class="leaf__fx leaf__shade"></div>
+        </div>
+      </div>
+      <div class="opening__bloom"></div>
+      <div class="opening__particles"></div>
+    </div>
+    <p class="opening__hint" data-opening-hint>Toque para abrir o convite</p>
+  </div>
+
+  <!-- Controle de música -->
+  <button class="music" type="button" data-music aria-pressed="false" aria-label="Pausar música" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="music__on"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="music__off"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+
+  <audio id="trilha" preload="auto" loop playsinline>
+    <source src="assets/audio/valsa.m4a" type="audio/mp4">
+    <source src="assets/audio/valsa.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- GSAP e ScrollTrigger locais (funciona offline e no GitHub Pages) -->
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/opening.js" defer></script>
+  <script src="js/audio.js" defer></script>
+  <script src="js/countdown.js" defer></script>
+  <script src="js/modals.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

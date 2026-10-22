@@ -1,0 +1,44 @@
+/* ============================================================
+   animations.css — keyframes e estados iniciais de revelação
+   ============================================================ */
+@keyframes twinkle { 0%, 100% { opacity: 0; scale: .3; rotate: 0deg; } 45% { opacity: 1; scale: 1; rotate: 20deg; } 75% { opacity: .15; scale: .55; rotate: 40deg; } }
+.js-anim .sparkles i.on { animation: twinkle 3.6s ease-in-out var(--d) infinite; }
+@keyframes music-ring { 0% { transform: scale(.9); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+
+/* Borboletas: batida de asas delicada (largura) + leve oscilação */
+@keyframes flap { 0%, 100% { transform: scaleX(1) rotate(0deg); } 45% { transform: scaleX(.62) rotate(1.5deg); } 70% { transform: scaleX(.92) rotate(-1deg); } }
+
+/* Poeira dourada de fundo (muito discreta) */
+.bg__dust {
+  background-image:
+    radial-gradient(2px 2px at 12% 18%, rgba(233,196,109,.9), transparent 60%),
+    radial-gradient(1.5px 1.5px at 78% 12%, rgba(255,240,190,.95), transparent 60%),
+    radial-gradient(2px 2px at 36% 44%, rgba(233,196,109,.8), transparent 60%),
+    radial-gradient(1.5px 1.5px at 88% 52%, rgba(255,240,190,.9), transparent 60%),
+    radial-gradient(2px 2px at 20% 78%, rgba(233,196,109,.85), transparent 60%),
+    radial-gradient(1.5px 1.5px at 62% 86%, rgba(255,240,190,.9), transparent 60%),
+    radial-gradient(1.5px 1.5px at 52% 28%, rgba(233,196,109,.8), transparent 60%);
+  animation: dust 18s ease-in-out infinite alternate;
+}
+@keyframes dust { from { transform: translate3d(0,0,0); opacity: .45; } to { transform: translate3d(10px,-22px,0); opacity: .9; } }
+
+/* Estados iniciais (só com JS ativo e sem movimento reduzido) */
+html.js-anim [data-h],
+html.js-anim [data-reveal],
+html.js-anim [data-line],
+html.js-anim [data-paper],
+html.js-anim [data-ev],
+html.js-anim [data-event-plate],
+html.js-anim [data-unit-wrap],
+html.js-anim .bfly,
+html.js-anim .btn,
+html.js-anim .gem,
+html.js-anim [data-finale-crown],
+html.js-anim [data-finale-name],
+html.js-anim [data-finale-phrase],
+html.js-anim [data-castle] { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bfly img, .bg__dust, .sparkles i, .music::after { animation: none !important; }
+  .modal, .modal__panel { transition-duration: .01ms !important; }
+}
